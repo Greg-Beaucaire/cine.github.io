@@ -13,19 +13,16 @@ let dbSearch = async function(movieTitle) {
        `<h1 class="titre">${json.Title}</h1>`
        +`<img src="${json.Poster}" alt="affiche du film">`
        +`<ul>`
-       +`<li>Réalisateur : ${json.Director}</li>`
-       +`<li>Année de sortie : ${json.Year}</li>`
-       +`<li>Durée : ${json.Runtime}</li>`
-       +`<li>Avec : ${json.Actors}</li>`
-       +`<li>Genre (en anglais) : ${json.Genre}</li>`
-       +`<li>Intrigue (en anglais) : ${json.Plot}</li>`
+       +`<li><b>Réalisateur</b> : ${json.Director}</li>`
+       +`<li><b>Année de sortie</b> : ${json.Year}</li>`
+       +`<li><b>Durée</b> : ${json.Runtime}</li>`
+       +`<li><b>Avec</b> : ${json.Actors}</li>`
+       +`<li><b>Genre</b> : ${json.Genre}</li>`
+       +`<li><b>Intrigue</b> : ${json.Plot}</li>`
        +`</ul>`;
     } else {
       document.querySelector(".resultat").innerHTML =
-        `<fieldset>`
-       +`<legend>Résultat de la recherche "${movieTitle}"</legend>`
-       +`<p>Désolé mais je n'ai pas de résultat pour cette recherche (${json.Error})</p>`
-       +`</fieldset>`;
+      `<p>Désolé mais je n'ai pas de résultat pour cette recherche (${json.Error})</p>`;
     }
   } catch (error) {
     alert(`Aïe!\nZut!\nUne erreur (diabolique, forcément) est survenue :\n${error}`);
@@ -36,4 +33,21 @@ let dbSearch = async function(movieTitle) {
 document.querySelector("form").addEventListener("submit", (event) => {
   event.preventDefault(); // bloque l'envoi par défaut
   dbSearch(event.target[0].value); // récupère la valeur du premier élément et la transmet à notre fonction `dbSearch`
+});
+
+
+
+function themeSwitch() {
+  if (formInput) {
+  document.getElementById("pageStyle").setAttribute("href","style2.css");
+  } else {
+    document.getElementById("pageStyle").setAttribute("href","style.css");
+  }
+};
+
+let form = document.getElementById("myForm");
+let formInput = false;
+
+form.addEventListener("input", function () {
+    formInput = true;
 });

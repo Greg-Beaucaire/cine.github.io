@@ -8,12 +8,12 @@
       name="description"
       content="Bienvenue sur votre moteur de recherche dédié au cinéma. Par Année Lumière, le podcast du septième art."
     />
-    <link rel="stylesheet" href="style.css" />
+    <link id="pageStyle" rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
-      <img src="logo.png" alt="Logo de Année Lumière" />
-      <form action="index.html" method="post">
+      <img class="logo" src="logo.png" alt="Logo de Année Lumière" />
+      <form id="myForm" action="index.html" method="post">
         <div class="recherche">
           <input
             type="text"
@@ -22,7 +22,7 @@
             placeholder="Quel film cherchez-vous ?"
             required
           />
-          <input type="submit" value="GO" />
+          <input type="submit" value="GO" onclick="themeSwitch();"/>
         </div>
       </form>
       <div class="resultat"></div>
