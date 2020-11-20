@@ -1,0 +1,231 @@
+/*écran pc master race*/
+@media (min-width: 1600px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    color: #f6f6f6;
+    padding: 0;
+  }
+
+  body {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #464646;
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+
+  img {
+    width: 50rem;
+    height: auto;
+    margin-top: -30rem;
+    margin-bottom: 10rem;
+  }
+
+  main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .recherche {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: ". . bloc3 bloc4 .";
+  }
+
+  main > form > div > input:nth-of-type(1) {
+    border: solid #fac710 0.3rem;
+    background-color: white;
+    width: 90rem;
+    height: 7rem;
+    margin-right: 3rem;
+    color: #808080;
+    text-align: center;
+    font-size: 2.6rem;
+    grid-area: bloc3;
+  }
+
+  main > form > div > input:nth-of-type(2) {
+    border: dashed #353535 0.7rem;
+    background-color: #fac710;
+    width: 17rem;
+    height: 7rem;
+    font-size: 3.6rem;
+    font-weight: 700;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    border-radius: 1.5rem;
+    grid-area: bloc4;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+
+
+/* Petit écran pc*/
+@media (min-width: 1200px) and (max-width: 1599px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    color: #f6f6f6;
+    padding: 0;
+  }
+
+  body {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #464646;
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+
+  img {
+    width: 35rem;
+    height: auto;
+    margin-top: -25rem;
+    margin-bottom: 8rem;
+  }
+
+  main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .recherche {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: ". . bloc3 bloc4 .";
+  }
+
+  main > form > div > input:nth-of-type(1) {
+    border: solid #fac710 0.3rem;
+    background-color: white;
+    width: 70rem;
+    height: 6rem;
+    margin-right: 3rem;
+    color: #808080;
+    text-align: center;
+    font-size: 2.6rem;
+    grid-area: bloc3;
+  }
+
+  main > form > div > input:nth-of-type(2) {
+    border: dashed #353535 0.7rem;
+    background-color: #fac710;
+    width: 14rem;
+    height: 6rem;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    border-radius: 1.5rem;
+    grid-area: bloc4;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+
+
+/*Tout ce qui en dessous de petit écran pc #niklétablète*/
+@media (max-width: 1199px) {
+  html {
+    font-size: 12px;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    color: #f6f6f6;
+    padding: 0;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: #464646;
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  .logo {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10rem;
+  }
+
+  .recherche {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+
+  main > form > div > input:nth-of-type(1) {
+    border: solid #fac710 0.3rem;
+    background-color: white;
+    color: #808080;
+    text-align: center;
+    width: 26rem;
+    height: 5.5rem;
+    align-self: center;
+    font-size: 2.1rem;
+  }
+
+  main > form > div > input:nth-of-type(2) {
+    border: dashed #353535 0.7rem;
+    background-color: #fac710;
+    border-radius: 50%;
+    height: 7rem;
+    width: 7rem;
+    align-self: center;
+    margin-top: 3rem;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  footer {
+    text-align: center;
+    font-size: 1rem;
+  }
+}
